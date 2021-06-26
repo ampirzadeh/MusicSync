@@ -112,7 +112,7 @@ export default class Index extends Vue {
 
             audioPlayer.currentTime = maxTrackTime
             this.isPlaying = true
-            setInterval(this.trackProgress)
+            setInterval(this.trackProgress, 5000)
           })
       })
 
