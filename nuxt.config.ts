@@ -56,7 +56,7 @@ const config: NuxtConfig = {
     baseURL:
       process.env.NODE_ENV === 'development'
         ? 'http://localhost:8081'
-        : 'https://ammusic.herokuapp.com/',
+        : 'https://ammusic.herokuapp.com',
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
