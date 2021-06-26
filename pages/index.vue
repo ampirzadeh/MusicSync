@@ -21,12 +21,7 @@
 
         <v-card-title v-text="trackName" />
 
-        <audio
-          v-show="false"
-          ref="audioPlayer"
-          :src="audioURL"
-          @timeupdate="trackProgress"
-        />
+        <audio v-show="false" ref="audioPlayer" :src="audioURL" />
 
         <v-card-actions>
           <v-row>
@@ -117,6 +112,7 @@ export default class Index extends Vue {
 
             audioPlayer.currentTime = maxTrackTime
             this.isPlaying = true
+            setInterval(this.trackProgress)
           })
       })
 
