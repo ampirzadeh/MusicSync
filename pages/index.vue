@@ -67,6 +67,7 @@ export default class Index extends Vue {
   isPlaying = false
   trackName = ''
   lastFile = ''
+  cancelFunc!: () => void
 
   @LocalStorage.State
   tracksData!: Record<string, number>
@@ -117,8 +118,6 @@ export default class Index extends Vue {
             audioPlayer.currentTime = maxTrackTime
             this.isPlaying = true
           })
-
-        setInterval(this.saveProgress, 30000)
       })
 
       fileInput.remove()
@@ -132,36 +131,46 @@ export default class Index extends Vue {
   trackProgress() {
     const audioPlayer = this.$refs.audioPlayer as HTMLAudioElement
     this.audioProgress = (audioPlayer.currentTime / audioPlayer.duration) * 100
+    this.saveProgress()
   }
 
   forward() {
     const audioPlayer = this.$refs.audioPlayer as HTMLAudioElement
     audioPlayer.currentTime += 15
+    this.saveProgress()
   }
 
   rewind() {
     const audioPlayer = this.$refs.audioPlayer as HTMLAudioElement
     audioPlayer.currentTime -= 15
+    this.saveProgress()
   }
 
   @Watch('isPlaying')
   handlePlayPause(value: boolean) {
-    this.saveProgress()
-
     const audioPlayer = this.$refs.audioPlayer as HTMLAudioElement
     if (value) audioPlayer.play()
     else audioPlayer.pause()
   }
 
   saveProgress() {
+    if (this.$nuxt.isOnline) this.cancelFunc()
+
     const audioPlayer = this.$refs.audioPlayer as HTMLAudioElement
     const data = {
       trackName: this.trackName,
       trackTime: audioPlayer.currentTime,
     }
-
     this.SaveProgress(data)
-    this.$axios.$post('/progress', data).catch(this.saveProgress)
+
+    if (this.$nuxt.isOnline)
+      this.$axios
+        .$post('/progress', data, {
+          cancelToken: new this.$axios.CancelToken((c) => {
+            this.cancelFunc = c
+          }),
+        })
+        .catch(this.saveProgress)
   }
 }
 </script>
