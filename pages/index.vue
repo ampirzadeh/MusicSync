@@ -117,9 +117,8 @@ export default class Index extends Vue {
 
             audioPlayer.currentTime = maxTrackTime || 0
             this.isPlaying = true
-
-            setInterval(this.saveProgress, 1000)
           })
+        setInterval(this.saveProgress, 1000)
       })
 
       fileInput.remove()
@@ -138,13 +137,11 @@ export default class Index extends Vue {
   forward() {
     const audioPlayer = this.$refs.audioPlayer as HTMLAudioElement
     audioPlayer.currentTime += 15
-    this.saveProgress()
   }
 
   rewind() {
     const audioPlayer = this.$refs.audioPlayer as HTMLAudioElement
     audioPlayer.currentTime -= 15
-    this.saveProgress()
   }
 
   @Watch('isPlaying')
