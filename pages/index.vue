@@ -103,7 +103,7 @@ export default class Index extends Vue {
 
         this.$axios
           .$get<number>('/progress', {
-            params: {
+            data: {
               trackName: this.trackName,
             },
           })
@@ -161,11 +161,7 @@ export default class Index extends Vue {
     }
 
     this.SaveProgress(data)
-    this.$axios
-      .$post('/progress', {
-        params: data,
-      })
-      .catch(this.saveProgress)
+    this.$axios.$post('/progress', data).catch(this.saveProgress)
   }
 }
 </script>
