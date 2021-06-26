@@ -164,13 +164,11 @@ export default class Index extends Vue {
     this.SaveProgress(data)
 
     if (this.$nuxt.isOnline)
-      this.$axios
-        .$post('/progress', data, {
-          cancelToken: new this.$axios.CancelToken((c) => {
-            this.cancelFunc = c
-          }),
-        })
-        .catch(this.saveProgress)
+      this.$axios.$post('/progress', data, {
+        cancelToken: new this.$axios.CancelToken((c) => {
+          this.cancelFunc = c
+        }),
+      })
   }
 }
 </script>
