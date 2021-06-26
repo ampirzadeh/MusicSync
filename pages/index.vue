@@ -103,7 +103,7 @@ export default class Index extends Vue {
 
         this.$axios
           .$get<number>('/progress', {
-            data: {
+            params: {
               trackName: this.trackName,
             },
           })
