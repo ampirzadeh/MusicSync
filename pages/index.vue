@@ -154,7 +154,8 @@ export default class Index extends Vue {
   }
 
   saveProgress() {
-    if (this.$nuxt.isOnline) this.cancelFunc()
+    if (this.cancelFunc && typeof this.cancelFunc === 'function')
+      this.cancelFunc()
 
     const audioPlayer = this.$refs.audioPlayer as HTMLAudioElement
     const data = {
@@ -163,14 +164,13 @@ export default class Index extends Vue {
     }
     this.SaveProgress(data)
 
-    if (this.$nuxt.isOnline)
-      this.$axios
-        .$post('/progress', data, {
-          cancelToken: new this.$axios.CancelToken((c) => {
-            this.cancelFunc = c
-          }),
-        })
-        .catch(this.saveProgress)
+    this.$axios
+      .$post('/progress', data, {
+        cancelToken: new this.$axios.CancelToken((c) => {
+          this.cancelFunc = c
+        }),
+      })
+      .catch(this.saveProgress)
   }
 }
 </script>
