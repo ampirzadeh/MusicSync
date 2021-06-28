@@ -6016,22 +6016,22 @@ multimap@^1.1.0:
   resolved "https://registry.yarnpkg.com/multimap/-/multimap-1.1.0.tgz#5263febc085a1791c33b59bb3afc6a76a2a10ca8"
   integrity sha512-0ZIR9PasPxGXmRsEF8jsDzndzHDj7tIav+JUmvIFB/WHswliFnquxECT/De7GR4yg99ky/NlRKJT82G1y271bw==
 
-music-metadata-browser@^2.2.6:
-  version "2.2.6"
-  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-2.2.6.tgz#cd4e301fe9bb38c7ba586fe0cf30814f6a28ed89"
-  integrity sha512-juiYl1KACjtuM4LiCdCpWe/kvPz3iFVLjkMI0FrEH26VBCA1ZWSPwBCjaiD8XGOcBsU2ZpdSa3diljppdeIyEA==
+music-metadata-browser@^2.2.7:
+  version "2.2.7"
+  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-2.2.7.tgz#c70e158393ef2d82ff9b1dc84329fc4757db57bc"
+  integrity sha512-SBCrvDiQq7n8WGaacRfgZaflH90lE0ccCblXeh91uJWO4lhK1pnwc1B9JyxMvdTv7eUa05yd2bkhCiyAXebNCA==
   dependencies:
     buffer "^6.0.3"
     debug "^4.0.1"
-    music-metadata "^7.8.1"
+    music-metadata "^7.8.8"
     readable-stream "^3.6.0"
     readable-web-to-node-stream "^3.0.1"
     typedarray-to-buffer "^4.0.0"
 
-music-metadata@^7.8.1:
-  version "7.8.7"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-7.8.7.tgz#c689f174d8b886807f7caaed0e4e45d459b7a15e"
-  integrity sha512-sR0ik6xPPVk5Z+TedLuE51y142VsRVrAAdzv1Qtncgp6iWx/lBiwVHM/tTSPFzIuj+hQoXsNQ0NeogbS8ZCYPQ==
+music-metadata@^7.8.8:
+  version "7.8.8"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-7.8.8.tgz#3f1c5a38eb54642a96f0d66fb9e704088fb8b427"
+  integrity sha512-NUtXW6FQA1fvBp4Q5o78Df6LHWqyny8bHxArJ79i5lr2N28jEd9HYyH09CAHKLjwiv58QLRa8r3P5nX36Spcxw==
   dependencies:
     content-type "^1.0.4"
     debug "^4.3.1"
