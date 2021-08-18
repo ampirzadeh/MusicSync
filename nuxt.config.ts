@@ -1,9 +1,6 @@
 import { NuxtConfig } from '@nuxt/types'
 
 const config: NuxtConfig = {
-  router: {
-    base: process.env.NODE_ENV === 'production' ? '/MusicSync/' : '/',
-  },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
 
