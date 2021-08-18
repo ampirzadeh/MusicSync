@@ -61,6 +61,12 @@ const LocalStorage = namespace('LocalStorage')
 
 @Component
 export default class Index extends Vue {
+  head() {
+    return {
+      title: this.trackName || 'Upload your music',
+    }
+  }
+
   thumbnailURL = ''
   audioURL = ''
   audioProgress = 0

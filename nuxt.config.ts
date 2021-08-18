@@ -1,5 +1,3 @@
-import colors from 'vuetify/src/util/colors'
-
 import { NuxtConfig } from '@nuxt/types'
 
 const config: NuxtConfig = {
@@ -8,9 +6,6 @@ const config: NuxtConfig = {
   },
   // Disable server-side rendering: https://go.nuxtjs.dev/ssr-mode
   ssr: false,
-
-  // Target: https://go.nuxtjs.dev/config-target
-  target: 'static',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -55,11 +50,12 @@ const config: NuxtConfig = {
     },
   },
 
+  serverMiddleware: {
+    '/api': '~/api',
+  } as any,
+
   axios: {
-    baseURL:
-      process.env.NODE_ENV === 'development'
-        ? 'http://localhost:8081'
-        : 'https://ammusic.herokuapp.com',
+    baseURL: process.env.NODE_ENV === 'development' ? '/api' : '/api',
   },
 
   // Vuetify module configuration: https://go.nuxtjs.dev/config-vuetify
@@ -72,7 +68,7 @@ const config: NuxtConfig = {
       dark: true,
       themes: {
         dark: {
-          primary: colors.orange.base,
+          primary: '#ff9800',
         },
       },
     },
