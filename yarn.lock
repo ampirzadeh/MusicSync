@@ -4062,10 +4062,10 @@ eslint-plugin-unicorn@^28.0.2:
     safe-regex "^2.1.1"
     semver "^7.3.4"
 
-eslint-plugin-vue@^7.1.0, eslint-plugin-vue@^7.16.0, eslint-plugin-vue@^7.9.0:
-  version "7.16.0"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.16.0.tgz#7fe9fea039a190b108319c1380adf543ef57707d"
-  integrity sha512-0E2dVvVC7I2Xm1HXyx+ZwPj9CNX4NJjs4K4r+GVsHWyt5Pew3JLD4fI7A91b2jeL0TXE7LlszrwLSTJU9eqehw==
+eslint-plugin-vue@^7.1.0, eslint-plugin-vue@^7.19.0, eslint-plugin-vue@^7.9.0:
+  version "7.19.0"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-vue/-/eslint-plugin-vue-7.19.0.tgz#4981f31c5df40fc1b2710d4fcb3e5e75fc644a48"
+  integrity sha512-pqsJY1q0cjdQerWSlGHo+NfnWZ8Xuc5tetddljJJ7726auWsnHty7F5qgj/EcjkPgyj8s5Lw4YGuhsFHkzIrkQ==
   dependencies:
     eslint-utils "^2.1.0"
     natural-compare "^1.4.0"
@@ -9395,10 +9395,8 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
-    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
