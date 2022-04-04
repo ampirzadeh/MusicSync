@@ -3561,10 +3561,10 @@ debug@^3.2.7:
   dependencies:
     ms "^2.1.1"
 
-debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.2:
-  version "4.3.2"
-  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.2.tgz#f0a49c18ac8779e31d4a0c6029dfb76873c7428b"
-  integrity sha512-mOp8wKcvj7XxC78zLgw/ZA+6TSgkoE2C/ienthhRD298T7UNwAg9diBpLRxC0mOezLl4B0xV7M0cCO6P/O0Xhw==
+debug@^4.0.1, debug@^4.1.0, debug@^4.1.1, debug@^4.3.1, debug@^4.3.4:
+  version "4.3.4"
+  resolved "https://registry.yarnpkg.com/debug/-/debug-4.3.4.tgz#1319f6579357f2338d3337d2cdd4914bb5dcc865"
+  integrity sha512-PRWFHuSU3eDtQJPvnNY7Jcket1j0t5OuOsFzPPzsekD52Zl8qUfFIPEiswXqIvHWGVHOgX+7G/vCNNhehwxfkQ==
   dependencies:
     ms "2.1.2"
 
@@ -6156,28 +6156,29 @@ multimap@^1.1.0:
   resolved "https://registry.yarnpkg.com/multimap/-/multimap-1.1.0.tgz#5263febc085a1791c33b59bb3afc6a76a2a10ca8"
   integrity sha512-0ZIR9PasPxGXmRsEF8jsDzndzHDj7tIav+JUmvIFB/WHswliFnquxECT/De7GR4yg99ky/NlRKJT82G1y271bw==
 
-music-metadata-browser@^2.4.3:
-  version "2.4.3"
-  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-2.4.3.tgz#d4cae21f1983d576031c20168fa479a5d685690d"
-  integrity sha512-nhVBoT5ZW46IbE8DYNq5atGxFQkBVYu5cFeU0XhC9F1pJs6VAcNp7DEOalXoyWr4bQkfcdm+b3KAGKwwL3IEdQ==
+music-metadata-browser@^2.5.6:
+  version "2.5.6"
+  resolved "https://registry.yarnpkg.com/music-metadata-browser/-/music-metadata-browser-2.5.6.tgz#56d75b601b36fe296596fe12a9b5eb1ba2b50395"
+  integrity sha512-tzv2pJh6Cr/Rnqz59KqLmzszbRy8EJtORpxYaGPk0GwTGUoOn68oqfq5QiwaJAwEbEz5WIzlEOGke2f6i0EfwQ==
   dependencies:
     buffer "^6.0.3"
-    debug "^4.3.2"
-    music-metadata "^7.11.3"
+    debug "^4.3.4"
+    music-metadata "^7.12.3"
     readable-stream "^3.6.0"
     readable-web-to-node-stream "^3.0.2"
 
-music-metadata@^7.11.3:
-  version "7.11.3"
-  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-7.11.3.tgz#baa19c29aacb4f4f602a557d6f71bc4310211008"
-  integrity sha512-Ou1y7H6zIbrbxnTacKQgrLC5GZgOGKykcqUf6jhuoFzfZjnKJkm4Ke1hqYhqnW3PHwrsmkAs/GP9SUGiukwubA==
+music-metadata@^7.12.3:
+  version "7.12.3"
+  resolved "https://registry.yarnpkg.com/music-metadata/-/music-metadata-7.12.3.tgz#47d2414a959352c9d310074d39182e9be71e1419"
+  integrity sha512-6pZngaroNxGBf8KZjE8reGZJiS533eJq7dBFsyoiEAZIORQAxmVVx20ABh9W2tsLT+5mKYyDzcNi5GuHf3jitg==
   dependencies:
+    "@tokenizer/token" "^0.3.0"
     content-type "^1.0.4"
-    debug "^4.3.2"
+    debug "^4.3.4"
     file-type "16.5.3"
     media-typer "^1.1.0"
-    strtok3 "^6.2.4"
-    token-types "^4.1.1"
+    strtok3 "^6.3.0"
+    token-types "^4.2.0"
 
 mustache@^2.3.0:
   version "2.3.2"
@@ -6782,6 +6783,11 @@ peek-readable@^4.0.1:
   version "4.0.1"
   resolved "https://registry.yarnpkg.com/peek-readable/-/peek-readable-4.0.1.tgz#9a045f291db254111c3412c1ce4fec27ddd4d202"
   integrity sha512-7qmhptnR0WMSpxT5rMHG9bW/mYSR1uqaPFj2MHvT+y/aOUu6msJijpKt5SkTDKySwg65OWG2JwTMBlgcbwMHrQ==
+
+peek-readable@^4.1.0:
+  version "4.1.0"
+  resolved "https://registry.yarnpkg.com/peek-readable/-/peek-readable-4.1.0.tgz#4ece1111bf5c2ad8867c314c81356847e8a62e72"
+  integrity sha512-ZI3LnwUv5nOGbQzD9c2iDG6toheuXSZP5esSHBjopsXH4dg19soufvpUGA3uohi5anFtGb2lhAVdHzH6R/Evvg==
 
 picomatch@^2.0.4, picomatch@^2.2.1, picomatch@^2.2.3:
   version "2.3.0"
@@ -8663,6 +8669,14 @@ strtok3@^6.2.4:
     "@tokenizer/token" "^0.3.0"
     peek-readable "^4.0.1"
 
+strtok3@^6.3.0:
+  version "6.3.0"
+  resolved "https://registry.yarnpkg.com/strtok3/-/strtok3-6.3.0.tgz#358b80ffe6d5d5620e19a073aa78ce947a90f9a0"
+  integrity sha512-fZtbhtvI9I48xDSywd/somNqgUHl2L2cstmXCCif0itOf96jeW18MBSyrLuNicYQVkvpOxkZtkzujiTJ9LW5Jw==
+  dependencies:
+    "@tokenizer/token" "^0.3.0"
+    peek-readable "^4.1.0"
+
 style-resources-loader@^1.4.1:
   version "1.4.1"
   resolved "https://registry.yarnpkg.com/style-resources-loader/-/style-resources-loader-1.4.1.tgz#87f520e6c8120a71e756726c1c53a78c544ca7db"
@@ -8912,6 +8926,14 @@ token-types@^4.1.1:
   version "4.1.1"
   resolved "https://registry.yarnpkg.com/token-types/-/token-types-4.1.1.tgz#ef9e8c8e2e0ded9f1b3f8dbaa46a3228b113ba1a"
   integrity sha512-hD+QyuUAyI2spzsI0B7gf/jJ2ggR4RjkAo37j3StuePhApJUwcWDjnHDOFdIWYSwNR28H14hpwm4EI+V1Ted1w==
+  dependencies:
+    "@tokenizer/token" "^0.3.0"
+    ieee754 "^1.2.1"
+
+token-types@^4.2.0:
+  version "4.2.0"
+  resolved "https://registry.yarnpkg.com/token-types/-/token-types-4.2.0.tgz#b66bc3d67420c6873222a424eee64a744f4c2f13"
+  integrity sha512-P0rrp4wUpefLncNamWIef62J0v0kQR/GfDVji9WKY7GDCWy5YbVSrKUTam07iWPZQGy0zWNOfstYTykMmPNR7w==
   dependencies:
     "@tokenizer/token" "^0.3.0"
     ieee754 "^1.2.1"
@@ -9395,10 +9417,8 @@ watchpack@^1.7.4:
   resolved "https://registry.yarnpkg.com/watchpack/-/watchpack-1.7.5.tgz#1267e6c55e0b9b5be44c2023aed5437a2c26c453"
   integrity sha512-9P3MWk6SrKjHsGkLT2KHXdQ/9SNkyoJbabxnKOoJepsvJjJG8uYTR3yTPxPQvNDI3w4Nz1xnE0TLHK4RIVe/MQ==
   dependencies:
-    chokidar "^3.4.1"
     graceful-fs "^4.1.2"
     neo-async "^2.5.0"
-    watchpack-chokidar2 "^2.0.1"
   optionalDependencies:
     chokidar "^3.4.1"
     watchpack-chokidar2 "^2.0.1"
